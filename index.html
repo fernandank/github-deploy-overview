@@ -2,14 +2,25 @@
 <html>
 
 <head>
-    <title>Table of commits</title>
+    <title>commits log</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <script src="script3.js"></script>
-    <h1> Table of commits</h1>
+
+    <h1> Table of Commits from a GitHub repository </h1>
     <br>
+    <div class="container">
+        <p> Submit the name of your repository and your GitHub username to search for all the commits!</p>
+        <h2>
+            <form action="" id="formSubmit">
+                Repo Name: <input type="text" id="reponame">
+                GitHub User: <input type="text" id="GitHubUser">
+        </h2>
+        <button id="btn" type=" submit">Search</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
     <br>
     <table id="commitTable">
         <thead>
@@ -17,7 +28,7 @@
                 <th>author/date</th>
             </tr>
         </thead>
-        <tbody></tbody>
+        <tbody id="commitListContainer"></tbody>
     </table>
 
 
