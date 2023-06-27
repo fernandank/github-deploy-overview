@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="style.css">
 
 <head>
-    <title>commits log</title>
-    <link rel="stylesheet" href="style.css">
+    <title>GitHub commits log</title>
+
 </head>
 
 <body>
+    <div class="container d-flex align-items-center h-100">
+        <h1> Table of Commits from a GitHub repository </h1>
+        <br>
 
-    <h1> Table of Commits from a GitHub repository </h1>
-    <br>
-    <div class="container">
         <p> Submit the name of your repository and your GitHub username to search for all the commits!</p>
+        <div class=" buffer col-12"></div>
         <h2>
-            <form action="" id="formSubmit">
-                Repo Name: <input type="text" id="reponame">
-                GitHub User: <input type="text" id="GitHubUser">
+
+            <form action="" id="formSubmit" class="form-inline">
+                <span> Repo Name: <input type=" text" id="reponame" required></span>
+                <span>GitHub User: <input type="text" id="GitHubUser" required></span>
+                <span><button id="btn" class="btn btn-primary btn-xl row-item row-item-second"
+                        type=" submit">Search</button></span>
+
+            </form>
         </h2>
-        <button id="btn" type=" submit">Search</button>
-        </form>
+    </div>
+
+
+
     </div>
     <script src="script.js"></script>
     <br>
-    <table id="commitTable">
-        <thead>
-            <tr>
-                <th>author/date</th>
-            </tr>
-        </thead>
-        <tbody id="commitListContainer"></tbody>
-    </table>
-
+    <div style="overflow-x:auto">
+        <table id="commitTable">
+            <thead>
+                <tr>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id=" commitListContainer">
+            </tbody>
+        </table>
+    </div>
 
 </body>
 

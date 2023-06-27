@@ -12,9 +12,9 @@
 body {
     background: hsl(204 100% 5%);
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     max-width: 100%;
     text-align: center;
+
 
 }
 
@@ -27,28 +27,40 @@ p {
     font-family: "Dank Mono", ui-monospace, monospace;
 }
 
-
-.heading {
-    display: flex;
-    background-color: #232f3e;
-    box-shadow: 0px 1px 2px #232f3e;
-    text-align: center;
+.buffer {
+    height: 3rem;
 
 }
 
-button {
+.btn-xl {
+    padding: 1rem;
+}
 
 
+
+.btn {
     appearance: none;
     -webkit-appearance: none;
-    padding: 10px;
     border: none;
+    font-weight: 700;
+    border-radius: 10px;
+    text-transform: uppercase;
+
+
+}
+
+.btn-primary {
     background-color: #3F51B5;
     color: #fff;
-    font-weight: 600;
-    border-radius: 5px;
-    width: 10%;
-    hover: var(--_p)40px
+
+
+}
+
+.btn-primary:hover {
+    background-color: hsl(204 100% 59%);
+    border-color: hsl(204 100% 59%);
+    border-width: 4px;
+
 }
 
 h1 {
@@ -56,6 +68,7 @@ h1 {
     background: linear-gradient(to right,
             hsl(98 100% 62%),
             hsl(204 100% 59%));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
@@ -67,19 +80,31 @@ h1 {
 }
 
 
-
 form {
-    display: inline-block;
-    padding: 20px;
-    margin: 10px 0;
+
+    padding: 20px 20px;
     border: 2px solid #eee;
     border-radius: 10px;
-    max-width: 60%;
+    max-width: fit-content;
     box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
     box-sizing: border-box;
     color: aliceblue;
 }
 
+.form-inline {
+    display: inline-flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.row-item-first {
+    text-align: left;
+}
+
+span {
+    margin: 10px;
+
+}
 
 .outer-wrapper {
     margin: 10px;
