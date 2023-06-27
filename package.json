@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "moment": "^2.29.4",
+    "node-fetch": "^3.3.1"
+  },
+  "name": "latitud",
+  "description": "latitud hiring process",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
+}
