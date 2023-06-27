@@ -18,13 +18,17 @@ or you can check the deployed version here: https://main--beamish-mermaid-e31570
 Insert both name of owner of the repository and name of the repository and press Search.
 
 You can find the information in the URL of the repository, for example: 
-https://github.com/fernandank/startup-of-the-year
+https://github.com/fernandank/smart-brain
 
 In this case:
 
-Repo Name: startup-of-the-year
+Repo Name: smart-brain
 
 GitHub User: fernandank
+
+eg.:
+![alt text](https://freeimage.host/i/HPmaWjj)
+
 
 
 ## Future Improvements 
