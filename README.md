@@ -29,9 +29,26 @@ GitHub User: fernandank
 eg.:
 ![alt text](https://iili.io/HPmaWjj.png)
 
+## Architecture
+
+### front
+Both HTML and CSS were created to be responsible, the <script> tag is placed after the body to read the DOM files and make the application run faster.
+
+### fetching API
+The app starts fetching the GitHub API that returns a JSON with informations of commits from a repository, using the inputs 1. Name of the repository 2. GitHub user that owns the repository
+
+### creating table
+After receiving the json file, we create two different sets with unique dates and authors date will be the header of the table and the first column, consecutively. 
+
+To create the table we reference the HTML file with querySelectors, then, we populate the table with the sum of commits of the day per author. In this step, it was important to remove and append a new table, so if the user click on the buttom multiple times, the table doesn't append in itself. 
+
+### showing commits of the day
+to be able to show the url from the commits of a specif day and author, we added an eventListener that append the commits url. There are cases of forked repos that the API doesn't bring the urls for the commits. To find the commits of a original repo, you just need to add it's information in a new search.
 
 
 ## Future Improvements 
 * The table is emptied When clicking on a cell with the value 0;
 * the links for the commits shows in the first column of the table, I would rather show a cleaner list;
+* I've test the code with mocha and manually, but with more time and more complexicity added, I would like to run more testing.
+* Most functions depends on attibutes created outside their scope
 * For further developments, I would like to improve the experience by creating a react app. Because I relied a lot in the HTML tags I opted to deliver the project faster and working.
