@@ -27,7 +27,7 @@ Repo Name: smart-brain
 GitHub User: fernandank
 
 eg.:
-![alt text](https://freeimage.host/i/HPmaWjj)
+![alt text](https://iili.io/HPmaWjj.png)
 
 
 
