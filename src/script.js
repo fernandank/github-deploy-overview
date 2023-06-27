@@ -1,3 +1,6 @@
+//
+//                      functions 
+// 
 
 // this func add header to the table with unique dates of commits
 function AddHeader(uniqueDates) {
@@ -58,15 +61,16 @@ function displayCommitURLs(commits, commitURL) {
             link.textContent = commitURL.commitURL;
             listItem.appendChild(link);
             commitList.appendChild(listItem);
-
         }
-
-
     });
 
     // Append the list element to the commitListContainer
     commitListContainer.appendChild(commitList);
 }
+
+//
+//                             main
+//
 
 // listen to the answers from html input to fetch from the github API
 let searchBox = document.getElementById("formSubmit")
@@ -107,8 +111,6 @@ searchBox.addEventListener('submit', function (event) {
             const table = document.querySelector("#commitTable");
             const tableBody = document.querySelector("#commitTable tbody")
             const tableHead = document.querySelector("#commitTable thead")
-
-
 
             // Calculate sum of commits
 
