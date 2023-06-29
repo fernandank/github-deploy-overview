@@ -2,6 +2,7 @@
 //                      functions 
 // 
 
+
 // this func add header to the table with unique dates of commits
 function AddHeader(uniqueDates) {
     const tableHead = document.createElement("thead");
@@ -68,6 +69,21 @@ function displayCommitURLs(commits, commitURL) {
     commitListContainer.appendChild(commitList);
 }
 
+//Calculate sum of commits
+function CalculateCommitSums(commitData) {
+    const commitSums = {};
+    for (const commit of commitData) {
+        if (!(commit.date in commitSums)) {
+            commitSums[commit.date] = {};
+        }
+        if (!(commit.author in commitSums[commit.date])) {
+            commitSums[commit.date][commit.author] = 0;
+        }
+        commitSums[commit.date][commit.author] += 1;
+    }
+    return commitSums;
+}
+
 //
 //                             main
 //
@@ -112,18 +128,9 @@ searchBox.addEventListener('submit', function (event) {
             const tableBody = document.querySelector("#commitTable tbody")
             const tableHead = document.querySelector("#commitTable thead")
 
-            // Calculate sum of commits
+            //Calculate sum of commits  
+            const commitSums = CalculateCommitSums(commitData);
 
-            const commitSums = {};
-            for (const commit of commitData) {
-                if (!(commit.date in commitSums)) {
-                    commitSums[commit.date] = {};
-                }
-                if (!(commit.author in commitSums[commit.date])) {
-                    commitSums[commit.date][commit.author] = 0;
-                }
-                commitSums[commit.date][commit.author] += 1;
-            }
 
 
             // To prevent multiple tables and headers to append when button is pressed
